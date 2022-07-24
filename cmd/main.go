@@ -1,6 +1,10 @@
 package main
 
-import "github.com/gin-gonic/gin"
+import (
+	"net/http"
+
+	"github.com/gin-gonic/gin"
+)
 
 func main() {
 	r := gin.Default()
@@ -9,5 +13,5 @@ func main() {
 }
 
 func Helloworld(c *gin.Context) {
-	c.json("Hello world")
+	c.JSON(http.StatusAccepted, "Hello world")
 }
