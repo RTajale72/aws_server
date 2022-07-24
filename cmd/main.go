@@ -8,7 +8,7 @@ import (
 
 func main() {
 	r := gin.Default()
-	r.Get("/", Helloworld)
+	r.GET("/", Helloworld)
 	r.Run()
 }
 
