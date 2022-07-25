@@ -7,9 +7,10 @@ import (
 )
 
 func main() {
+	//backend_port := os.Getenv("BACKEND_PORT")
 	r := gin.Default()
 	r.GET("/hello", Helloworld)
-	r.Run()
+	r.Run(":8000")
 }
 
 func Helloworld(c *gin.Context) {
